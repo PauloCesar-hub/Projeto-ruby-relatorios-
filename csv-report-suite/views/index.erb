@@ -2,10 +2,11 @@
 <section class="card">
   <h2>Gerar relatório</h2>
   <form id="report-form" method="post" enctype="multipart/form-data">
+    <div class="form-status" id="form-status"></div>
     <div class="grid">
       <div>
         <label>Arquivo (.csv ou .json)</label>
-        <input type="file" name="file" />
+        <input type="file" name="file" accept=".csv,.json" />
       </div>
       <div>
         <label>OU URL de API (JSON)</label>
@@ -15,6 +16,7 @@
         <label>Tipo de relatório</label>
         <select name="type">
           <option value="expenses">Despesas</option>
+          <option value="invoices">Faturas</option>
           <option value="notes">Notas</option>
         </select>
       </div>
@@ -32,18 +34,147 @@
       </div>
     </div>
     <div class="actions">
-      <button type="submit" formaction="/export/csv">Baixar CSV</button>
-      <button type="submit" formaction="/export/pdf">Baixar PDF</button>
-      <button type="submit" formaction="/export/xlsx">Baixar XLSX</button>
+      <button type="submit" data-action="/export/csv">📄 Baixar CSV</button>
+      <button type="submit" data-action="/export/pdf">📋 Baixar PDF</button>
+      <button type="submit" data-action="/export/xlsx">📊 Baixar XLSX</button>
     </div>
-    <p class="muted"><small>Dica: use os exemplos em <code>/samples</code>.</small></p>
+    <p class="muted"><small>💡 Dica: use os exemplos em <code>/samples</code> ou teste a API: <code>/health</code></small></p>
   </form>
 </section>
 
 <section class="card">
   <h2>Exemplos de dados</h2>
-  <ul>
-    <li><a href="/samples/expenses.csv" download>samples/expenses.csv</a></li>
-    <li><a href="/samples/notes.json" download>samples/notes.json</a></li>
-  </ul>
+  <div class="grid">
+    <div>
+      <h3>Arquivos locais</h3>
+      <ul>
+        <li><a href="/samples/expenses.csv" download>📄 expenses.csv</a></li>
+        <li><a href="/samples/notes.json" download>📄 notes.json</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>APIs para teste</h3>
+      <ul>
+        <li><a href="/health" target="_blank">🔍 Health Check</a></li>
+        <li><code>GET /health</code> - Status da aplicação</li>
+      </ul>
+    </div>
+  </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('report-form');
+  const buttons = form.querySelectorAll('button[data-action]');
+  const status = document.getElementById('form-status');
+  
+  function showStatus(message, type = 'info') {
+    status.textContent = message;
+    status.className = `form-status show ${type}`;
+    setTimeout(() => {
+      status.classList.remove('show');
+    }, 3000);
+  }
+  
+  function setLoading(loading) {
+    form.classList.toggle('loading', loading);
+    buttons.forEach(btn => {
+      btn.disabled = loading;
+      if (loading) {
+        btn.textContent = btn.textContent.replace(/📄|📋|📊/, '⏳');
+      } else {
+        // Restore original text
+        const action = btn.dataset.action;
+        if (action.includes('csv')) btn.textContent = '📄 Baixar CSV';
+        else if (action.includes('pdf')) btn.textContent = '📋 Baixar PDF';
+        else if (action.includes('xlsx')) btn.textContent = '📊 Baixar XLSX';
+      }
+    });
+  }
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const fileInput = form.querySelector('input[name="file"]');
+      const urlInput = form.querySelector('input[name="url"]');
+      
+      // Validation
+      if (!fileInput.files.length && !urlInput.value.trim()) {
+        showStatus('Por favor, selecione um arquivo ou informe uma URL', 'error');
+        return;
+      }
+      
+      // Set form action and submit
+      const action = this.dataset.action;
+      form.action = action;
+      
+      setLoading(true);
+      showStatus('Processando...', 'info');
+      
+      // Create FormData and submit via fetch for better error handling
+      const formData = new FormData(form);
+      
+      fetch(action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (!response.ok) {
+          return response.text().then(text => {
+            throw new Error(`Erro ${response.status}: ${text}`);
+          });
+        }
+        
+        // Get filename from Content-Disposition header
+        const disposition = response.headers.get('Content-Disposition');
+        const filename = disposition 
+          ? disposition.split('filename=')[1]?.replace(/"/g, '')
+          : `download_${Date.now()}`;
+        
+        return response.blob().then(blob => ({ blob, filename }));
+      })
+      .then(({ blob, filename }) => {
+        // Create download link
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+        
+        showStatus('Download iniciado com sucesso!', 'success');
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        showStatus(`Erro: ${error.message}`, 'error');
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+    });
+  });
+  
+  // File input validation
+  const fileInput = form.querySelector('input[name="file"]');
+  const urlInput = form.querySelector('input[name="url"]');
+  
+  fileInput.addEventListener('change', function() {
+    if (this.files.length) {
+      urlInput.value = '';
+      showStatus('Arquivo selecionado', 'success');
+    }
+  });
+  
+  urlInput.addEventListener('input', function() {
+    if (this.value.trim()) {
+      fileInput.value = '';
+      if (this.validity.valid) {
+        showStatus('URL válida', 'success');
+      }
+    }
+  });
+});
+</script>

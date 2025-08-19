@@ -13,10 +13,10 @@ checking for sys/resource.h... yes
 creating Makefile
 
 current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20250819-3386-5jpbc4 sitelibdir\=./.gem.20250819-3386-5jpbc4 clean
+make DESTDIR\= sitearchdir\=./.gem.20250819-6428-q76rro sitelibdir\=./.gem.20250819-6428-q76rro clean
 
 current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20250819-3386-5jpbc4 sitelibdir\=./.gem.20250819-3386-5jpbc4
+make DESTDIR\= sitearchdir\=./.gem.20250819-6428-q76rro sitelibdir\=./.gem.20250819-6428-q76rro
 compiling bytebuffer.c
 compiling monitor.c
 compiling nio4r_ext.c
@@ -46,8 +46,8 @@ selector.c:525:5: warning: ignoring return value of ‘write’ declared with at
 linking shared-object nio4r_ext.so
 
 current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20250819-3386-5jpbc4 sitelibdir\=./.gem.20250819-3386-5jpbc4 install
-/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20250819-3386-5jpbc4
+make DESTDIR\= sitearchdir\=./.gem.20250819-6428-q76rro sitelibdir\=./.gem.20250819-6428-q76rro install
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20250819-6428-q76rro
 
 current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20250819-3386-5jpbc4 sitelibdir\=./.gem.20250819-3386-5jpbc4 clean
+make DESTDIR\= sitearchdir\=./.gem.20250819-6428-q76rro sitelibdir\=./.gem.20250819-6428-q76rro clean

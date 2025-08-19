@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="card error-card">
+    <h1>🚫 Erro <%= error_code %></h1>
+    <p class="error-message"><%= h(error_message) %></p>
+    
+    <% if error_details %>
+      <details class="error-details">
+        <summary>Detalhes técnicos</summary>
+        <pre><%= h(error_details) %></pre>
+      </details>
+    <% end %>
+    
+    <div class="actions">
+      <a href="/" class="button">🏠 Voltar ao início</a>
+    </div>
+  </div>
+</div>

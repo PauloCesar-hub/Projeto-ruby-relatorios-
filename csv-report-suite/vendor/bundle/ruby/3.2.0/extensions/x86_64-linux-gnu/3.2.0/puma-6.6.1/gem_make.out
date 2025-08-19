@@ -24,18 +24,18 @@ checking for Random.bytes... yes
 creating Makefile
 
 current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/puma-6.6.1/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20250819-3386-iuliqq sitelibdir\=./.gem.20250819-3386-iuliqq clean
+make DESTDIR\= sitearchdir\=./.gem.20250819-6428-g3z79s sitelibdir\=./.gem.20250819-6428-g3z79s clean
 
 current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/puma-6.6.1/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20250819-3386-iuliqq sitelibdir\=./.gem.20250819-3386-iuliqq
+make DESTDIR\= sitearchdir\=./.gem.20250819-6428-g3z79s sitelibdir\=./.gem.20250819-6428-g3z79s
 compiling http11_parser.c
 compiling mini_ssl.c
 compiling puma_http11.c
 linking shared-object puma/puma_http11.so
 
 current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/puma-6.6.1/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20250819-3386-iuliqq sitelibdir\=./.gem.20250819-3386-iuliqq install
-/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20250819-3386-iuliqq/puma
+make DESTDIR\= sitearchdir\=./.gem.20250819-6428-g3z79s sitelibdir\=./.gem.20250819-6428-g3z79s install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20250819-6428-g3z79s/puma
 
 current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/puma-6.6.1/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20250819-3386-iuliqq sitelibdir\=./.gem.20250819-3386-iuliqq clean
+make DESTDIR\= sitearchdir\=./.gem.20250819-6428-g3z79s sitelibdir\=./.gem.20250819-6428-g3z79s clean
