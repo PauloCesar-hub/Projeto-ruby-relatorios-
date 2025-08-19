@@ -1,0 +1,58 @@
+current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/rmagick-6.1.3/ext/RMagick
+/usr/bin/ruby3.2 -I/usr/lib/ruby/vendor_ruby extconf.rb
+checking for brew... no
+checking for pacman... no
+
+Detected ImageMagick packages:
+- /usr/lib/x86_64-linux-gnu/pkgconfig/ImageMagick-6.Q16.pc
+
+checking for outdated ImageMagick version (<= 6.8.9)... no
+checking for x86_64-linux-gnu-g++... yes
+checking for MagickCore/MagickCore.h... no
+checking for magick/MagickCore.h... yes
+checking for malloc.h... yes
+checking for rb_io_path() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... no
+checking for posix_memalign() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... yes
+checking for malloc_usable_size() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... yes
+checking for malloc_size() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... no
+checking for _aligned_msize() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... no
+checking for GetImageChannelEntropy() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... yes
+checking for SetImageGray() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... yes
+checking for SetMagickAlignedMemoryMethods() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... yes
+creating extconf.h
+creating Makefile
+======================================================================
+Tue 19 Aug 25 19:57:02
+This installation of RMagick 6.1.3 is configured for
+Ruby 3.2.3 (x86_64-linux-gnu) and ImageMagick 6.9.12
+======================================================================
+
+
+Configured compile options: {:magick_version=>"6.9.12", :local_libs=>"  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16", :cppflags=>"-Wdate-time -D_FORTIFY_SOURCE=3 $(DEFS) $(cppflags)  -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register $(optflags) $(debugflags) -fomit-frame-pointer", :ldflags=>"-L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu", :defs=>["-DHAVE_MAGICK_MAGICKCORE_H", "-DHAVE_MALLOC_H", "-DHAVE_POSIX_MEMALIGN", "-DHAVE_MALLOC_USABLE_SIZE", "-DHAVE_GETIMAGECHANNELENTROPY", "-DHAVE_SETIMAGEGRAY", "-DHAVE_SETMAGICKALIGNEDMEMORYMETHODS", "-DRUBY_VERSION_STRING=\"ruby 3.2.3\"", "-DRMAGICK_VERSION_STRING=\"RMagick 6.1.3\"", "-DIMAGEMAGICK_GREATER_THAN_EQUAL_6_9_0=1", "-DIMAGEMAGICK_GREATER_THAN_EQUAL_6_9_10=1"], :config_h=>"Makefile"}
+
+current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/rmagick-6.1.3/ext/RMagick
+make DESTDIR\= sitearchdir\=./.gem.20250819-6195-bre3ff sitelibdir\=./.gem.20250819-6195-bre3ff clean
+
+current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/rmagick-6.1.3/ext/RMagick
+make DESTDIR\= sitearchdir\=./.gem.20250819-6195-bre3ff sitelibdir\=./.gem.20250819-6195-bre3ff
+compiling rmagick.cpp
+compiling rmdraw.cpp
+compiling rmenum.cpp
+compiling rmfill.cpp
+compiling rmilist.cpp
+compiling rmimage.cpp
+compiling rminfo.cpp
+compiling rmkinfo.cpp
+compiling rmmain.cpp
+compiling rmmontage.cpp
+compiling rmpixel.cpp
+compiling rmstruct.cpp
+compiling rmutil.cpp
+linking shared-object RMagick2.so
+
+current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/rmagick-6.1.3/ext/RMagick
+make DESTDIR\= sitearchdir\=./.gem.20250819-6195-bre3ff sitelibdir\=./.gem.20250819-6195-bre3ff install
+/usr/bin/install -c -m 0755 RMagick2.so ./.gem.20250819-6195-bre3ff
+
+current directory: /home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/rmagick-6.1.3/ext/RMagick
+make DESTDIR\= sitearchdir\=./.gem.20250819-6195-bre3ff sitelibdir\=./.gem.20250819-6195-bre3ff clean

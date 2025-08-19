@@ -1,0 +1,504 @@
+find_executable: checking for brew... -------------------- no
+
+--------------------
+
+find_executable: checking for pacman... -------------------- no
+
+--------------------
+
+
+Detected ImageMagick packages:
+- /usr/lib/x86_64-linux-gnu/pkgconfig/ImageMagick-6.Q16.pc
+
+assert_has_dev_libs!: checking for outdated ImageMagick version (<= 6.8.9)... -------------------- no
+
+Detected ImageMagick version: 6.9.12
+--------------------
+
+find_executable: checking for x86_64-linux-gnu-g++... -------------------- yes
+
+--------------------
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() { }
+/* end */
+
+have_header: checking for MagickCore/MagickCore.h... -------------------- no
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC   -c conftest.c"
+conftest.c:3:10: fatal error: MagickCore/MagickCore.h: No such file or directory
+    3 | #include <MagickCore/MagickCore.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <MagickCore/MagickCore.h>
+/* end */
+
+--------------------
+
+have_header: checking for magick/MagickCore.h... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <magick/MagickCore.h>
+/* end */
+
+--------------------
+
+have_header: checking for malloc.h... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <malloc.h>
+/* end */
+
+--------------------
+
+have_func: checking for rb_io_path() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... -------------------- no
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+conftest.c: In function ‘int t()’:
+conftest.c:26:57: error: ‘rb_io_path’ was not declared in this scope; did you mean ‘rb_io_puts’?
+   26 | int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_io_path; return !p; }
+      |                                                         ^~~~~~~~~~
+      |                                                         rb_io_puts
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <assert.h>
+ 4: #include <ctype.h>
+ 5: #include <stdio.h>
+ 6: #include <stdlib.h>
+ 7: #include <math.h>
+ 8: #include <time.h>
+ 9: #include <sys/types.h>
+10: #include <ruby.h>
+11: #include <ruby/io.h>
+12: #include <magick/MagickCore.h>
+13: #include <malloc.h>
+14: 
+15: /*top*/
+16: extern int t(void);
+17: int main(int argc, char **argv)
+18: {
+19:   if (argc > 1000000) {
+20:     int (* volatile tp)(void)=(int (*)(void))&t;
+21:     printf("%d", (*tp)());
+22:   }
+23: 
+24:   return !!argv[argc];
+25: }
+26: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_io_path; return !p; }
+/* end */
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+/usr/bin/ld: /tmp/cckKV1Tv.o: in function `t()':
+/home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/rmagick-6.1.3/ext/RMagick/conftest.c:27:(.text+0x9): undefined reference to `rb_io_path()'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <assert.h>
+ 4: #include <ctype.h>
+ 5: #include <stdio.h>
+ 6: #include <stdlib.h>
+ 7: #include <math.h>
+ 8: #include <time.h>
+ 9: #include <sys/types.h>
+10: #include <ruby.h>
+11: #include <ruby/io.h>
+12: #include <magick/MagickCore.h>
+13: #include <malloc.h>
+14: 
+15: /*top*/
+16: extern int t(void);
+17: int main(int argc, char **argv)
+18: {
+19:   if (argc > 1000000) {
+20:     int (* volatile tp)(void)=(int (*)(void))&t;
+21:     printf("%d", (*tp)());
+22:   }
+23: 
+24:   return !!argv[argc];
+25: }
+26: extern void rb_io_path();
+27: int t(void) { rb_io_path(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for posix_memalign() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <assert.h>
+ 4: #include <ctype.h>
+ 5: #include <stdio.h>
+ 6: #include <stdlib.h>
+ 7: #include <math.h>
+ 8: #include <time.h>
+ 9: #include <sys/types.h>
+10: #include <ruby.h>
+11: #include <ruby/io.h>
+12: #include <magick/MagickCore.h>
+13: #include <malloc.h>
+14: 
+15: /*top*/
+16: extern int t(void);
+17: int main(int argc, char **argv)
+18: {
+19:   if (argc > 1000000) {
+20:     int (* volatile tp)(void)=(int (*)(void))&t;
+21:     printf("%d", (*tp)());
+22:   }
+23: 
+24:   return !!argv[argc];
+25: }
+26: int t(void) { void ((*volatile p)()); p = (void ((*)()))posix_memalign; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for malloc_usable_size() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <assert.h>
+ 4: #include <ctype.h>
+ 5: #include <stdio.h>
+ 6: #include <stdlib.h>
+ 7: #include <math.h>
+ 8: #include <time.h>
+ 9: #include <sys/types.h>
+10: #include <ruby.h>
+11: #include <ruby/io.h>
+12: #include <magick/MagickCore.h>
+13: #include <malloc.h>
+14: 
+15: /*top*/
+16: extern int t(void);
+17: int main(int argc, char **argv)
+18: {
+19:   if (argc > 1000000) {
+20:     int (* volatile tp)(void)=(int (*)(void))&t;
+21:     printf("%d", (*tp)());
+22:   }
+23: 
+24:   return !!argv[argc];
+25: }
+26: int t(void) { void ((*volatile p)()); p = (void ((*)()))malloc_usable_size; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for malloc_size() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... -------------------- no
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+conftest.c: In function ‘int t()’:
+conftest.c:26:57: error: ‘malloc_size’ was not declared in this scope
+   26 | int t(void) { void ((*volatile p)()); p = (void ((*)()))malloc_size; return !p; }
+      |                                                         ^~~~~~~~~~~
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <assert.h>
+ 4: #include <ctype.h>
+ 5: #include <stdio.h>
+ 6: #include <stdlib.h>
+ 7: #include <math.h>
+ 8: #include <time.h>
+ 9: #include <sys/types.h>
+10: #include <ruby.h>
+11: #include <ruby/io.h>
+12: #include <magick/MagickCore.h>
+13: #include <malloc.h>
+14: 
+15: /*top*/
+16: extern int t(void);
+17: int main(int argc, char **argv)
+18: {
+19:   if (argc > 1000000) {
+20:     int (* volatile tp)(void)=(int (*)(void))&t;
+21:     printf("%d", (*tp)());
+22:   }
+23: 
+24:   return !!argv[argc];
+25: }
+26: int t(void) { void ((*volatile p)()); p = (void ((*)()))malloc_size; return !p; }
+/* end */
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+/usr/bin/ld: /tmp/ccg7fPuL.o: in function `t()':
+/home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/rmagick-6.1.3/ext/RMagick/conftest.c:27:(.text+0x9): undefined reference to `malloc_size()'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <assert.h>
+ 4: #include <ctype.h>
+ 5: #include <stdio.h>
+ 6: #include <stdlib.h>
+ 7: #include <math.h>
+ 8: #include <time.h>
+ 9: #include <sys/types.h>
+10: #include <ruby.h>
+11: #include <ruby/io.h>
+12: #include <magick/MagickCore.h>
+13: #include <malloc.h>
+14: 
+15: /*top*/
+16: extern int t(void);
+17: int main(int argc, char **argv)
+18: {
+19:   if (argc > 1000000) {
+20:     int (* volatile tp)(void)=(int (*)(void))&t;
+21:     printf("%d", (*tp)());
+22:   }
+23: 
+24:   return !!argv[argc];
+25: }
+26: extern void malloc_size();
+27: int t(void) { malloc_size(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for _aligned_msize() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... -------------------- no
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+conftest.c: In function ‘int t()’:
+conftest.c:26:57: error: ‘_aligned_msize’ was not declared in this scope
+   26 | int t(void) { void ((*volatile p)()); p = (void ((*)()))_aligned_msize; return !p; }
+      |                                                         ^~~~~~~~~~~~~~
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <assert.h>
+ 4: #include <ctype.h>
+ 5: #include <stdio.h>
+ 6: #include <stdlib.h>
+ 7: #include <math.h>
+ 8: #include <time.h>
+ 9: #include <sys/types.h>
+10: #include <ruby.h>
+11: #include <ruby/io.h>
+12: #include <magick/MagickCore.h>
+13: #include <malloc.h>
+14: 
+15: /*top*/
+16: extern int t(void);
+17: int main(int argc, char **argv)
+18: {
+19:   if (argc > 1000000) {
+20:     int (* volatile tp)(void)=(int (*)(void))&t;
+21:     printf("%d", (*tp)());
+22:   }
+23: 
+24:   return !!argv[argc];
+25: }
+26: int t(void) { void ((*volatile p)()); p = (void ((*)()))_aligned_msize; return !p; }
+/* end */
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+/usr/bin/ld: /tmp/cc07OXpR.o: in function `t()':
+/home/runner/work/Projeto-ruby-relatorios-/Projeto-ruby-relatorios-/csv-report-suite/vendor/bundle/ruby/3.2.0/gems/rmagick-6.1.3/ext/RMagick/conftest.c:27:(.text+0x9): undefined reference to `_aligned_msize()'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <assert.h>
+ 4: #include <ctype.h>
+ 5: #include <stdio.h>
+ 6: #include <stdlib.h>
+ 7: #include <math.h>
+ 8: #include <time.h>
+ 9: #include <sys/types.h>
+10: #include <ruby.h>
+11: #include <ruby/io.h>
+12: #include <magick/MagickCore.h>
+13: #include <malloc.h>
+14: 
+15: /*top*/
+16: extern int t(void);
+17: int main(int argc, char **argv)
+18: {
+19:   if (argc > 1000000) {
+20:     int (* volatile tp)(void)=(int (*)(void))&t;
+21:     printf("%d", (*tp)());
+22:   }
+23: 
+24:   return !!argv[argc];
+25: }
+26: extern void _aligned_msize();
+27: int t(void) { _aligned_msize(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for GetImageChannelEntropy() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <assert.h>
+ 4: #include <ctype.h>
+ 5: #include <stdio.h>
+ 6: #include <stdlib.h>
+ 7: #include <math.h>
+ 8: #include <time.h>
+ 9: #include <sys/types.h>
+10: #include <ruby.h>
+11: #include <ruby/io.h>
+12: #include <magick/MagickCore.h>
+13: #include <malloc.h>
+14: 
+15: /*top*/
+16: extern int t(void);
+17: int main(int argc, char **argv)
+18: {
+19:   if (argc > 1000000) {
+20:     int (* volatile tp)(void)=(int (*)(void))&t;
+21:     printf("%d", (*tp)());
+22:   }
+23: 
+24:   return !!argv[argc];
+25: }
+26: int t(void) { void ((*volatile p)()); p = (void ((*)()))GetImageChannelEntropy; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for SetImageGray() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <assert.h>
+ 4: #include <ctype.h>
+ 5: #include <stdio.h>
+ 6: #include <stdlib.h>
+ 7: #include <math.h>
+ 8: #include <time.h>
+ 9: #include <sys/types.h>
+10: #include <ruby.h>
+11: #include <ruby/io.h>
+12: #include <magick/MagickCore.h>
+13: #include <malloc.h>
+14: 
+15: /*top*/
+16: extern int t(void);
+17: int main(int argc, char **argv)
+18: {
+19:   if (argc > 1000000) {
+20:     int (* volatile tp)(void)=(int (*)(void))&t;
+21:     printf("%d", (*tp)());
+22:   }
+23: 
+24:   return !!argv[argc];
+25: }
+26: int t(void) { void ((*volatile p)()); p = (void ((*)()))SetImageGray; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for SetMagickAlignedMemoryMethods() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,ruby.h,ruby/io.h,magick/MagickCore.h,malloc.h... -------------------- yes
+
+LD_LIBRARY_PATH=.:/usr/lib/x86_64-linux-gnu "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.2.0 -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -Wdate-time -D_FORTIFY_SOURCE=3    -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register -O3 -fno-fast-math -ggdb3 -fomit-frame-pointer -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=BUILDDIR=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=BUILDDIR=/usr/src/ruby3.2-3.2.3-1ubuntu0.24.04.5 -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu     -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16  -lruby-3.2  -lm -lpthread  -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <assert.h>
+ 4: #include <ctype.h>
+ 5: #include <stdio.h>
+ 6: #include <stdlib.h>
+ 7: #include <math.h>
+ 8: #include <time.h>
+ 9: #include <sys/types.h>
+10: #include <ruby.h>
+11: #include <ruby/io.h>
+12: #include <magick/MagickCore.h>
+13: #include <malloc.h>
+14: 
+15: /*top*/
+16: extern int t(void);
+17: int main(int argc, char **argv)
+18: {
+19:   if (argc > 1000000) {
+20:     int (* volatile tp)(void)=(int (*)(void))&t;
+21:     printf("%d", (*tp)());
+22:   }
+23: 
+24:   return !!argv[argc];
+25: }
+26: int t(void) { void ((*volatile p)()); p = (void ((*)()))SetMagickAlignedMemoryMethods; return !p; }
+/* end */
+
+--------------------
+
+extconf.h is:
+/* begin */
+ 1: #ifndef EXTCONF_H
+ 2: #define EXTCONF_H
+ 3: #define HAVE_MAGICK_MAGICKCORE_H 1
+ 4: #define HAVE_MALLOC_H 1
+ 5: #define HAVE_POSIX_MEMALIGN 1
+ 6: #define HAVE_MALLOC_USABLE_SIZE 1
+ 7: #define HAVE_GETIMAGECHANNELENTROPY 1
+ 8: #define HAVE_SETIMAGEGRAY 1
+ 9: #define HAVE_SETMAGICKALIGNEDMEMORYMETHODS 1
+10: #define RUBY_VERSION_STRING ruby 3.2.3
+11: #define RMAGICK_VERSION_STRING RMagick 6.1.3
+12: #define IMAGEMAGICK_GREATER_THAN_EQUAL_6_9_0 1
+13: #define IMAGEMAGICK_GREATER_THAN_EQUAL_6_9_10 1
+14: #endif
+/* end */
+
+======================================================================
+Tue 19 Aug 25 19:57:02
+This installation of RMagick 6.1.3 is configured for
+Ruby 3.2.3 (x86_64-linux-gnu) and ImageMagick 6.9.12
+======================================================================
+
+
+Configured compile options: {:magick_version=>"6.9.12", :local_libs=>"  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16", :cppflags=>"-Wdate-time -D_FORTIFY_SOURCE=3 $(DEFS) $(cppflags)  -I/usr/include/x86_64-linux-gnu//ImageMagick-6 -I/usr/include/ImageMagick-6 -fopenmp -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -x c++ -std=c++11 -Wno-register $(optflags) $(debugflags) -fomit-frame-pointer", :ldflags=>"-L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed  -L/usr/lib/x86_64-linux-gnu -lMagickCore-6.Q16 -Wl,-rpath,/usr/lib/x86_64-linux-gnu", :defs=>["-DHAVE_MAGICK_MAGICKCORE_H", "-DHAVE_MALLOC_H", "-DHAVE_POSIX_MEMALIGN", "-DHAVE_MALLOC_USABLE_SIZE", "-DHAVE_GETIMAGECHANNELENTROPY", "-DHAVE_SETIMAGEGRAY", "-DHAVE_SETMAGICKALIGNEDMEMORYMETHODS", "-DRUBY_VERSION_STRING=\"ruby 3.2.3\"", "-DRMAGICK_VERSION_STRING=\"RMagick 6.1.3\"", "-DIMAGEMAGICK_GREATER_THAN_EQUAL_6_9_0=1", "-DIMAGEMAGICK_GREATER_THAN_EQUAL_6_9_10=1"], :config_h=>"Makefile"}
