@@ -1,0 +1,145 @@
+plugins:
+  - rubocop-minitest
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-rbs_inline
+
+AllCops:
+    EnabledByDefault: true
+    TargetRubyVersion: 3.0
+    Exclude:
+        - 'vendor/bundle/**/*'
+        - 'rails_generators/gruff/**/*'
+        - 'build-ImageMagick/**/*'
+
+Metrics:
+  Enabled: false
+
+Bundler/GemComment:
+  Enabled: false
+
+Bundler/GemVersion:
+  Enabled: false
+
+Gemspec/DependencyVersion:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: true
+
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Layout/ClassStructure:
+  Enabled: false
+
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: false
+
+Layout/LeadingCommentSpace:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 150
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: false
+
+Layout/MultilineAssignmentLayout:
+  EnforcedStyle: same_line
+
+Layout/RedundantLineBreak:
+  Enabled: false
+
+Layout/SingleLineBlockChain:
+  Enabled: false
+
+Lint/ConstantResolution:
+  Enabled: false
+
+Lint/FloatComparison:
+  Enabled: false
+
+Lint/NumberConversion:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Style/AccessorGrouping:
+  Enabled: false
+
+Style/ArrayFirstLast:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ConstantVisibility:
+  Enabled: false
+
+Style/Copyright:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: true
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Style/DocumentDynamicEvalDefinition:
+  Enabled: false
+
+Style/FormatString:
+  EnforcedStyle: sprintf
+
+Style/GuardClause:
+  Enabled: false
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/InlineComment:
+  Enabled: false
+
+Style/ImplicitRuntimeError:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+Style/MissingElse:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/OptionHash:
+  Enabled: false
+
+Style/RedundantBegin:
+  Enabled: false
+
+Style/RequireOrder:
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/StructInheritance:
+  Enabled: false
+
+Style/YodaExpression:
+  Enabled: false
+
+Performance/ChainArrayAllocation:
+  Enabled: false
