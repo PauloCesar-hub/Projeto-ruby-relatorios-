@@ -1,0 +1,28 @@
+[
+  {
+    "date": "2025-07-10",
+    "title": "Reunião onboarding",
+    "text": "Anotar tarefas da sprint",
+    "tags": [
+      "projeto",
+      "sprint"
+    ]
+  },
+  {
+    "date": "2025-07-12",
+    "title": "Ideias produto",
+    "text": "Novas features para relatório",
+    "tags": [
+      "ideias",
+      "produto"
+    ]
+  },
+  {
+    "date": "2025-07-15",
+    "title": "Retrospectiva",
+    "text": "Pontos de melhoria",
+    "tags": [
+      "retro"
+    ]
+  }
+]
