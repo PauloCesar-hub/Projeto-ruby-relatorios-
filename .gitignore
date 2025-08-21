@@ -1,0 +1,12 @@
+/vendor/
+/.bundle/
+/.DS_Store
+/log/
+/tmp/
+/coverage/
+*.gem
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log

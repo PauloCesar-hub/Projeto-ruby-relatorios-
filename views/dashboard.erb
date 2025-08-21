@@ -1,0 +1,15 @@
+<% @title = "Dashboard" %>
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h5 class="card-title">Estatísticas</h5>
+    <p class="text-muted">Resumo dos artefatos gerados.</p>
+    <div class="row row-cols-1 row-cols-md-3 g-3 mb-3">
+      <% stats = JSON.parse(@stats_json) %>
+      <div class="col"><div class="p-3 border rounded-3">CSVs: <strong><%= stats["csv"] %></strong></div></div>
+      <div class="col"><div class="p-3 border rounded-3">Gráficos: <strong><%= stats["graphs"] %></strong></div></div>
+      <div class="col"><div class="p-3 border rounded-3">PDFs: <strong><%= stats["pdfs"] %></strong></div></div>
+    </div>
+    <pre class="bg-light p-3 rounded-3"><%= @stats_json %></pre>
+    <a class="btn btn-outline-secondary" href="/">Voltar</a>
+  </div>
+</div>

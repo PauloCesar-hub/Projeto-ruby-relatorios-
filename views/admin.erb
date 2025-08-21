@@ -1,0 +1,55 @@
+<% @title = "Admin" %>
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h5 class="card-title">Administração</h5>
+    <form class="row g-3 mb-3" method="get" action="/admin">
+      <div class="col-md-4">
+        <label class="form-label">Busca</label>
+        <input class="form-control" type="text" name="q" value="<%= CGI.escapeHTML(params['q'].to_s) %>" placeholder="Nome do arquivo">
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">De</label>
+        <input class="form-control" type="datetime-local" name="from" value="<%= CGI.escapeHTML(params['from'].to_s) %>">
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Até</label>
+        <input class="form-control" type="datetime-local" name="to" value="<%= CGI.escapeHTML(params['to'].to_s) %>">
+      </div>
+      <div class="col-md-2">
+        <label class="form-label">Status</label>
+        <select class="form-select" name="status">
+          <% current = (params['status'] || 'all') %>
+          <option value="all" <%= 'selected' if current=='all' %>>Todos</option>
+          <option value="pending" <%= 'selected' if current=='pending' %>>Pendentes</option>
+          <option value="done" <%= 'selected' if current=='done' %>>Prontos</option>
+        </select>
+      </div>
+      <div class="col-12 d-flex gap-2">
+        <button class="btn btn-primary">Filtrar</button>
+        <a class="btn btn-outline-secondary" href="/admin">Limpar</a>
+      </div>
+    </form>
+
+    <div class="table-responsive">
+      <table class="table table-sm align-middle">
+        <thead class="table-light"><tr><th>Arquivo</th><th>Modificado</th><th>Tamanho</th><th>Gráfico</th><th>PDF</th></tr></thead>
+        <tbody>
+          <% if @files.empty? %>
+            <tr><td colspan="5" class="text-center text-muted py-4">Nenhum resultado.</td></tr>
+          <% else %>
+            <% @files.each do |h| %>
+              <tr>
+                <td><%= h[:name] %></td>
+                <td><%= h[:mtime].strftime("%Y-%m-%d %H:%M") %></td>
+                <td><%= h[:size] %></td>
+                <td><%= h[:graph] ? "OK" : "-" %></td>
+                <td><%= h[:pdf] ? "OK" : "-" %></td>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <a class="btn btn-outline-secondary" href="/">Voltar</a>
+  </div>
+</div>
